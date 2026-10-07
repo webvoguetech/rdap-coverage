@@ -1,0 +1,55 @@
+# Keep the dataset current without anyone remembering to.
+#
+# IANA republishes the bootstrap registry on its own schedule -- new TLDs get
+# endpoints, registries move hosts, and occasionally a TLD is withdrawn. A
+# reference that silently goes stale is worse than no reference, because the
+# staleness is invisible to whoever is relying on it.
+#
+# Commits ONLY when the data actually changed. A weekly commit that says
+# "updated" and changes a timestamp trains everyone to ignore the history, and
+# makes it impossible to see at a glance when coverage genuinely moved.
+name: refresh
+
+on:
+  schedule:
+    # 06:40 UTC on Mondays, deliberately not on the hour: GitHub delays
+    # scheduled jobs under load, and the busiest minutes are the round ones.
+    - cron: '40 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Rebuild from IANA
+        run: node build.mjs
+
+      - name: Commit only on a real change
+        run: |
+          # The snapshot carries a `fetched` timestamp that changes on every
+          # run, so it alone is not evidence of anything. Diff the generated
+          # dataset instead -- that moves only when IANA's data does.
+          if git diff --quiet -- data/rdap-coverage.json; then
+            echo "IANA data unchanged; nothing to commit"
+            git checkout -- . || true
+            exit 0
+          fi
+          node -e "
+            const d = require('./data/rdap-coverage.json').totals
+            console.log(\`::notice::\${d.with_rdap}/\${d.delegated} TLDs publish RDAP\`)
+          "
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ README.md
+          git commit -m "data: refresh from IANA bootstrap"
+          git push
