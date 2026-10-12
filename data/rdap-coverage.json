@@ -1,7 +1,7 @@
 {
   "source": "https://data.iana.org/rdap/dns.json",
   "iana_publication": "2026-09-30",
-  "generated": "2026-10-07",
+  "generated": "2026-10-12",
   "totals": {
     "delegated": 1437,
     "with_rdap": 1203,
