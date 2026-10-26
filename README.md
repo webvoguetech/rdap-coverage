@@ -7,10 +7,10 @@ IANA's own bootstrap registry.
 | | |
 |---|---|
 | TLDs delegated | **1437** |
-| Publish RDAP | **1203** (83.7%) |
-| Publish none | **234** |
+| Publish RDAP | **1204** (83.8%) |
+| Publish none | **233** |
 | Distinct registry endpoints | 379 |
-| IANA bootstrap published | 2026-09-30 |
+| IANA bootstrap published | 2026-10-22 |
 
 ## Why this exists
 
@@ -25,7 +25,7 @@ this:
 Answering "does `.io` publish RDAP, and where" from that means writing a
 parser. This repo writes it once, and cross-references IANA's list of delegated
 TLDs — which the bootstrap alone cannot give you, because it only lists TLDs
-that *have* a service. That cross-reference is what produces the 234
+that *have* a service. That cross-reference is what produces the 233
 below.
 
 ## Data
@@ -41,77 +41,77 @@ its endpoint or `null`:
 A searchable version of the same data is at
 [dropperch.com/rdap-support-by-tld.html](https://dropperch.com/rdap-support-by-tld.html).
 
-## The 234 TLDs with no RDAP service
+## The 233 TLDs with no RDAP service
 
 No RDAP endpoint in IANA's bootstrap, so no client can discover a server for
 them. Nearly all are country-code TLDs: ICANN requires RDAP of gTLD registries,
 while ccTLDs set their own policy.
 
-| `.ac` | `.gg` | `.mx` | `.xn--2scrj9c` |
-| `.ae` | `.gh` | `.my` | `.xn--3hcrj9c` |
-| `.af` | `.gi` | `.mz` | `.xn--45br5cyl` |
-| `.ag` | `.gl` | `.nc` | `.xn--45brj9c` |
-| `.al` | `.gm` | `.ne` | `.xn--4dbrk0ce` |
-| `.am` | `.gn` | `.ni` | `.xn--54b7fta0cc` |
-| `.ao` | `.gp` | `.np` | `.xn--80ao21a` |
-| `.aq` | `.gq` | `.nr` | `.xn--90a3ac` |
-| `.arpa` | `.gr` | `.nu` | `.xn--90ae` |
-| `.at` | `.gt` | `.nz` | `.xn--90ais` |
-| `.aw` | `.gu` | `.om` | `.xn--d1alf` |
-| `.ax` | `.gw` | `.pa` | `.xn--e1a4c` |
-| `.az` | `.hk` | `.pe` | `.xn--fiqs8s` |
-| `.ba` | `.hm` | `.pf` | `.xn--fiqz9s` |
-| `.bb` | `.hr` | `.ph` | `.xn--fpcrj9c3d` |
-| `.bd` | `.hu` | `.pk` | `.xn--fzc2c9e2c` |
-| `.be` | `.ie` | `.pr` | `.xn--gecrj9c` |
-| `.bf` | `.il` | `.ps` | `.xn--h2breg3eve` |
-| `.bg` | `.im` | `.pt` | `.xn--h2brj9c` |
-| `.bi` | `.io` | `.py` | `.xn--h2brj9c8c` |
-| `.bj` | `.iq` | `.qa` | `.xn--j1amh` |
-| `.bn` | `.ir` | `.ro` | `.xn--j6w193g` |
-| `.bo` | `.it` | `.rs` | `.xn--kprw13d` |
-| `.bs` | `.je` | `.ru` | `.xn--l1acc` |
-| `.bt` | `.jm` | `.sa` | `.xn--lgbbat1ad8j` |
-| `.bv` | `.jo` | `.sb` | `.xn--mgb9awbf` |
-| `.bw` | `.jp` | `.sc` | `.xn--mgba3a4f16a` |
-| `.by` | `.kh` | `.se` | `.xn--mgbaam7a8h` |
-| `.bz` | `.ki` | `.sh` | `.xn--mgbah1a3hjkrd` |
-| `.cd` | `.km` | `.sj` | `.xn--mgbai9azgqp6j` |
-| `.cf` | `.kn` | `.sk` | `.xn--mgbayh7gpa` |
-| `.cg` | `.kp` | `.sl` | `.xn--mgbbh1a` |
-| `.ch` | `.kw` | `.sm` | `.xn--mgbbh1a71e` |
-| `.ci` | `.kz` | `.so` | `.xn--mgbc0a9azcg` |
-| `.ck` | `.la` | `.st` | `.xn--mgberp4a5d4ar` |
-| `.cl` | `.lc` | `.su` | `.xn--mgbgu82a` |
-| `.cn` | `.li` | `.sv` | `.xn--mgbpl2fh` |
-| `.co` | `.lk` | `.sx` | `.xn--mgbtx2b` |
-| `.cu` | `.lr` | `.sy` | `.xn--mgbx4cd0ab` |
-| `.cw` | `.ls` | `.sz` | `.xn--mix891f` |
-| `.cy` | `.lt` | `.tc` | `.xn--node` |
-| `.de` | `.lu` | `.td` | `.xn--ogbpf8fl` |
-| `.dj` | `.lv` | `.tg` | `.xn--p1ai` |
-| `.dk` | `.ma` | `.tj` | `.xn--pgbs0dh` |
-| `.dm` | `.mc` | `.tk` | `.xn--q7ce6a` |
-| `.do` | `.md` | `.tl` | `.xn--qxa6a` |
-| `.dz` | `.me` | `.tm` | `.xn--qxam` |
-| `.edu` | `.mh` | `.tn` | `.xn--rvc1e0am3e` |
-| `.ee` | `.mil` | `.tr` | `.xn--s9brj9c` |
-| `.eg` | `.mk` | `.tt` | `.xn--wgbh1c` |
-| `.er` | `.mm` | `.ug` | `.xn--wgbl6a` |
-| `.es` | `.mn` | `.us` | `.xn--xkc2al3hye2a` |
-| `.et` | `.mo` | `.uy` | `.xn--xkc2dl3a5ee0h` |
-| `.eu` | `.mp` | `.va` | `.xn--y9a3aq` |
-| `.fk` | `.mq` | `.vc` | `.xn--ygbi2ammx` |
-| `.ga` | `.mr` | `.ve` | `.za` |
-| `.gb` | `.mt` | `.vn` | `.zw` |
-| `.ge` | `.mv` | `.vu` |  |
-| `.gf` | `.mw` | `.ws` |  |
+| `.ac` | `.gg` | `.mx` | `.xn--3hcrj9c` |
+| `.ae` | `.gh` | `.my` | `.xn--45br5cyl` |
+| `.af` | `.gi` | `.mz` | `.xn--45brj9c` |
+| `.ag` | `.gl` | `.nc` | `.xn--4dbrk0ce` |
+| `.al` | `.gm` | `.ne` | `.xn--54b7fta0cc` |
+| `.am` | `.gn` | `.ni` | `.xn--80ao21a` |
+| `.ao` | `.gp` | `.np` | `.xn--90a3ac` |
+| `.aq` | `.gq` | `.nr` | `.xn--90ae` |
+| `.arpa` | `.gr` | `.nu` | `.xn--90ais` |
+| `.at` | `.gt` | `.nz` | `.xn--d1alf` |
+| `.aw` | `.gu` | `.om` | `.xn--e1a4c` |
+| `.ax` | `.gw` | `.pa` | `.xn--fiqs8s` |
+| `.az` | `.hk` | `.pe` | `.xn--fiqz9s` |
+| `.ba` | `.hm` | `.pf` | `.xn--fpcrj9c3d` |
+| `.bb` | `.hr` | `.ph` | `.xn--fzc2c9e2c` |
+| `.bd` | `.hu` | `.pk` | `.xn--gecrj9c` |
+| `.be` | `.ie` | `.pr` | `.xn--h2breg3eve` |
+| `.bf` | `.il` | `.ps` | `.xn--h2brj9c` |
+| `.bg` | `.im` | `.pt` | `.xn--h2brj9c8c` |
+| `.bi` | `.io` | `.py` | `.xn--j1amh` |
+| `.bj` | `.iq` | `.qa` | `.xn--j6w193g` |
+| `.bn` | `.ir` | `.ro` | `.xn--kprw13d` |
+| `.bo` | `.it` | `.rs` | `.xn--l1acc` |
+| `.bs` | `.je` | `.ru` | `.xn--lgbbat1ad8j` |
+| `.bt` | `.jm` | `.sa` | `.xn--mgb9awbf` |
+| `.bv` | `.jo` | `.sb` | `.xn--mgba3a4f16a` |
+| `.bw` | `.jp` | `.se` | `.xn--mgbaam7a8h` |
+| `.by` | `.kh` | `.sh` | `.xn--mgbah1a3hjkrd` |
+| `.bz` | `.ki` | `.sj` | `.xn--mgbai9azgqp6j` |
+| `.cd` | `.km` | `.sk` | `.xn--mgbayh7gpa` |
+| `.cf` | `.kn` | `.sl` | `.xn--mgbbh1a` |
+| `.cg` | `.kp` | `.sm` | `.xn--mgbbh1a71e` |
+| `.ch` | `.kw` | `.so` | `.xn--mgbc0a9azcg` |
+| `.ci` | `.kz` | `.st` | `.xn--mgberp4a5d4ar` |
+| `.ck` | `.la` | `.su` | `.xn--mgbgu82a` |
+| `.cl` | `.lc` | `.sv` | `.xn--mgbpl2fh` |
+| `.cn` | `.li` | `.sx` | `.xn--mgbtx2b` |
+| `.co` | `.lk` | `.sy` | `.xn--mgbx4cd0ab` |
+| `.cu` | `.lr` | `.sz` | `.xn--mix891f` |
+| `.cw` | `.ls` | `.tc` | `.xn--node` |
+| `.cy` | `.lt` | `.td` | `.xn--ogbpf8fl` |
+| `.de` | `.lu` | `.tg` | `.xn--p1ai` |
+| `.dj` | `.lv` | `.tj` | `.xn--pgbs0dh` |
+| `.dk` | `.ma` | `.tk` | `.xn--q7ce6a` |
+| `.dm` | `.mc` | `.tl` | `.xn--qxa6a` |
+| `.do` | `.md` | `.tm` | `.xn--qxam` |
+| `.dz` | `.me` | `.tn` | `.xn--rvc1e0am3e` |
+| `.edu` | `.mh` | `.tr` | `.xn--s9brj9c` |
+| `.ee` | `.mil` | `.tt` | `.xn--wgbh1c` |
+| `.eg` | `.mk` | `.ug` | `.xn--wgbl6a` |
+| `.er` | `.mm` | `.us` | `.xn--xkc2al3hye2a` |
+| `.es` | `.mn` | `.uy` | `.xn--xkc2dl3a5ee0h` |
+| `.et` | `.mo` | `.va` | `.xn--y9a3aq` |
+| `.eu` | `.mp` | `.vc` | `.xn--ygbi2ammx` |
+| `.fk` | `.mq` | `.ve` | `.za` |
+| `.ga` | `.mr` | `.vn` | `.zw` |
+| `.gb` | `.mt` | `.vu` |  |
+| `.ge` | `.mv` | `.ws` |  |
+| `.gf` | `.mw` | `.xn--2scrj9c` |  |
 
 ## Registries serving the most TLDs
 
 | Endpoint | TLDs |
 |---|---|
-| `rdap.identitydigital.services` | 450 |
+| `rdap.identitydigital.services` | 451 |
 | `rdap.centralnic.com` | 91 |
 | `rdap.nominet.uk` | 81 |
 | `pubapi.registry.google` | 46 |
@@ -154,5 +154,5 @@ here unmodified in substance; IANA's registries are public.
 
 Maintained alongside [DropPerch](https://dropperch.com), which monitors domain
 expiry by reading registries over RDAP. It cannot accurately monitor the
-234 TLDs listed above, which is the honest reason this list is
+233 TLDs listed above, which is the honest reason this list is
 published rather than buried.

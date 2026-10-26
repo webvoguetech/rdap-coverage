@@ -1,11 +1,11 @@
 {
   "source": "https://data.iana.org/rdap/dns.json",
-  "iana_publication": "2026-09-30",
-  "generated": "2026-10-19",
+  "iana_publication": "2026-10-22",
+  "generated": "2026-10-26",
   "totals": {
     "delegated": 1437,
-    "with_rdap": 1203,
-    "without_rdap": 234
+    "with_rdap": 1204,
+    "without_rdap": 233
   },
   "tlds": [
     {
@@ -4014,7 +4014,7 @@
     },
     {
       "tld": "sc",
-      "rdap": null
+      "rdap": "https://rdap.identitydigital.services/rdap"
     },
     {
       "tld": "scb",
