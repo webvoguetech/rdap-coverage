@@ -6,11 +6,11 @@ IANA's own bootstrap registry.
 
 | | |
 |---|---|
-| TLDs delegated | **1437** |
-| Publish RDAP | **1204** (83.8%) |
+| TLDs delegated | **1436** |
+| Publish RDAP | **1203** (83.8%) |
 | Publish none | **233** |
 | Distinct registry endpoints | 379 |
-| IANA bootstrap published | 2026-10-22 |
+| IANA bootstrap published | 2026-10-28 |
 
 ## Why this exists
 
@@ -111,7 +111,7 @@ while ccTLDs set their own policy.
 
 | Endpoint | TLDs |
 |---|---|
-| `rdap.identitydigital.services` | 451 |
+| `rdap.identitydigital.services` | 450 |
 | `rdap.centralnic.com` | 91 |
 | `rdap.nominet.uk` | 81 |
 | `pubapi.registry.google` | 46 |

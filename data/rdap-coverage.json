@@ -1,10 +1,10 @@
 {
   "source": "https://data.iana.org/rdap/dns.json",
-  "iana_publication": "2026-10-22",
-  "generated": "2026-10-26",
+  "iana_publication": "2026-10-28",
+  "generated": "2026-11-02",
   "totals": {
-    "delegated": 1437,
-    "with_rdap": 1204,
+    "delegated": 1436,
+    "with_rdap": 1203,
     "without_rdap": 233
   },
   "tlds": [
@@ -2099,10 +2099,6 @@
     {
       "tld": "help",
       "rdap": "https://rdap.centralnic.com/help"
-    },
-    {
-      "tld": "helsinki",
-      "rdap": "https://rdap.identitydigital.services/rdap"
     },
     {
       "tld": "here",
