@@ -1,11 +1,11 @@
 {
   "source": "https://data.iana.org/rdap/dns.json",
-  "iana_publication": "2026-10-28",
-  "generated": "2026-11-16",
+  "iana_publication": "2026-11-20",
+  "generated": "2026-11-23",
   "totals": {
-    "delegated": 1436,
+    "delegated": 1435,
     "with_rdap": 1203,
-    "without_rdap": 233
+    "without_rdap": 232
   },
   "tlds": [
     {
@@ -3646,7 +3646,7 @@
     },
     {
       "tld": "pr",
-      "rdap": null
+      "rdap": "https://rdap.identitydigital.services/rdap"
     },
     {
       "tld": "praxi",
@@ -5047,10 +5047,6 @@
     {
       "tld": "xerox",
       "rdap": "https://rdap.nic.xerox"
-    },
-    {
-      "tld": "xihuan",
-      "rdap": "https://rdap.teleinfo.cn"
     },
     {
       "tld": "xin",
